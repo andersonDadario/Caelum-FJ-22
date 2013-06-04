@@ -7,6 +7,21 @@ Argentum
 5) Gráfico
 
 ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+
+JUnit
+
+> mesmo pacote
+> source folder diferente
+> <classe>Test
+> métodos de teste são void
+> métodos de teste possuem a anotação "@test"
+
+~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+
+Considere utilizar um Builder caso o construtor
+possua muitos parâmetros. (Obs: FluentInterface)
+
+~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
 Calendar
 	- Tem i18n, ao invés da classe Date
 	Calendar cal = Calendar.getInstance();

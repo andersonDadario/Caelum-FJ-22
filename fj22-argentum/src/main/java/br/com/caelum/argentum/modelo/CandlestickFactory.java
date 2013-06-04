@@ -6,10 +6,10 @@ import java.util.List;
 public class CandlestickFactory {
 	public Candlestick constroiCandleParaData(Calendar data, 
             List<Negociacao> ns) {
-		double abertura = ns.get(0).getPreco();
-		double fechamento = ns.get(ns.size()-1).getPreco();
-		double minimo = abertura;
-		double maximo = ns.get(0).getPreco();
+		double abertura = ns.isEmpty()? 0 : ns.get(0).getPreco();
+		double fechamento = ns.isEmpty()? 0 : ns.get(ns.size()-1).getPreco();
+		double minimo = Double.MAX_VALUE;
+		double maximo = Double.MIN_VALUE;
 		double volume = 0;
 		
 		for(Negociacao n : ns){

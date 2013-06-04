@@ -19,7 +19,7 @@ public class CandlestickFactory {
 				maximo = n.getPreco();
 			}
 			
-			volume += n.getPreco();
+			volume += n.getVolume();
 		}
 		
 		return new Candlestick(

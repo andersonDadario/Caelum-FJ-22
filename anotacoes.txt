@@ -1,0 +1,25 @@
+Argentum
+
+1) Dados
+2) Negociação
+3) Candlestick
+4) Série Temporal
+5) Gráfico
+
+~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+Calendar
+	- Tem i18n, ao invés da classe Date
+	Calendar cal = Calendar.getInstance();
+	cal.add(Calendar.DAY, 1);
+	cal.get(Calendar.MONTH);
+	cal.set(Calendar.YEAR, 2013);
+
+	Bizarrisses:
+		// Remover dia
+		cal.add(Calendar.DAY, -1);
+
+		// Mês começa em 0, por isso se usa constantes
+		cal.set(Calendar.MONTH, Calendar.NOVEMBER)
+
+	Solução: Joda Time
+

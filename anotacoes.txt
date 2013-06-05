@@ -8,6 +8,38 @@ Argentum
 
 ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
 
+1) Class classe = Class.forName(pacote + nomeDaClasse)
+
+2) Class classe = new Negociacao().getClass();
+
+3) Class classe = Negociacao.class
+
+~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+
+Mandrakisses
+
+Dado o código
+	Calendar.getData(){
+		return data;
+	}
+
+Retorna a referência para a Data, portanto
+utilizando o código abaixo:
+
+	Negociacao n = new Negociacao(...);
+	Calendar cal = n.getData();
+	cal.set(Calendar.DAY, 20);
+
+É possível alterar o valor da data, mesmo sem
+haver um setter.
+
+A solução para esse problema é:
+	Calendar.getData(){
+		return (Calendar)this.data.clone();
+	}
+
+~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+
 JUnit
 
 > mesmo pacote

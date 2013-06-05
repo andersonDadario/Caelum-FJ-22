@@ -4,9 +4,11 @@ import java.util.Arrays;
 import java.util.Calendar;
 import java.util.List;
 
-import junit.framework.Assert;
+//import junit.framework.Assert;
 
 import org.junit.Test;
+import static org.junit.Assert.*;
+
 
 public class CandlestickFactoryTest {
 	  /*
@@ -34,11 +36,11 @@ public class CandlestickFactoryTest {
 	    CandlestickFactory fabrica = new CandlestickFactory();
 	    Candlestick candle = fabrica.constroiCandleParaData(hoje, negociacoes);
 	    
-	    Assert.assertEquals(40.5, candle.getAbertura(), 0.00001);
-	    Assert.assertEquals(42.3, candle.getFechamento(), 0.00001);
-	    Assert.assertEquals(39.8, candle.getMinimo(), 0.00001);
-	    Assert.assertEquals(45.0, candle.getMaximo(), 0.00001);
-	    Assert.assertEquals(16760.0, candle.getVolume(), 0.00001);
+	    assertEquals(40.5, candle.getAbertura(), 0.00001);
+	    assertEquals(42.3, candle.getFechamento(), 0.00001);
+	    assertEquals(39.8, candle.getMinimo(), 0.00001);
+	    assertEquals(45.0, candle.getMaximo(), 0.00001);
+	    assertEquals(16760.0, candle.getVolume(), 0.00001);
 	  }
 	  
 	  @Test
@@ -48,6 +50,6 @@ public class CandlestickFactoryTest {
 		  
 		  CandlestickFactory candlestick = new CandlestickFactory();
 		  Candlestick candle = candlestick.constroiCandleParaData(hoje, ns);
-		  Assert.assertEquals(0.0, candle.getVolume(), 0.00001);
+		  assertEquals(0.0, candle.getVolume(), 0.00001);
 	  }
 	}

@@ -13,6 +13,10 @@ public final class Negociacao {
 	 * Selecionar "Ommit call to default constructor super()"
 	 */
 	public Negociacao(double preco, int quantidade, Calendar data) {
+		if(data == null){
+			throw new IllegalArgumentException();
+		}
+		
 		this.preco = preco;
 		this.quantidade = quantidade;
 		this.data = data;
@@ -33,7 +37,8 @@ public final class Negociacao {
 	}
 
 	public Calendar getData() {
-		return data;
+		//return data;
+		return (Calendar) data.clone();
 	}
 	
 	public double getVolume() {

@@ -28,12 +28,6 @@ public class NegociacaoTest {
 	@Test(expected=IllegalArgumentException.class)
 	public void dataNaoPodeSerNula(){
 		new Negociacao(100, 100, null);
-//		try{
-//			new Negociacao(100, 100, null);
-//			Assert.fail();
-//		} catch(IllegalArgumentException e) {
-//			Assert.assertTrue(true);
-//		}
 	}
 
 }

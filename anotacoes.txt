@@ -7,6 +7,19 @@ Argentum
 5) Gráfico
 
 ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+Principais conceitos:
+	- good practice: criar outro source folder p/ JUnit
+	- mesmo final, é possível alterar o objeto para qual
+			   [a  variável de referência aponta
+	- import static para métodos e atributos estáticos de
+					     [qualquer classe
+	- @test aceita parâmetros, como "expected"
+	- CAST no Java é mais usado do que eu pensava
+~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+
+Especificação SAX evoluiu para JAX
+
+~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
 
 1) Class classe = Class.forName(pacote + nomeDaClasse)
 
@@ -52,6 +65,10 @@ JUnit
 
 Considere utilizar um Builder caso o construtor
 possua muitos parâmetros. (Obs: FluentInterface)
+
+~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+
+Dê preferência às exceções padrões do Java
 
 ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
 Calendar

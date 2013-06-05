@@ -1,6 +1,7 @@
 package br.com.caelum.argentum.modelo;
 
 import java.util.Calendar;
+import java.util.List;
 
 public final class Negociacao {
 	private final double preco;
@@ -43,5 +44,9 @@ public final class Negociacao {
 	
 	public double getVolume() {
 		  return preco * quantidade;
+	}
+	
+	public boolean isMesmoDia(Calendar dataArg, List lista){
+		return (data == dataArg);
 	}
 }

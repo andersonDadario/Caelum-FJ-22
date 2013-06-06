@@ -20,6 +20,9 @@ Principais conceitos:
 		Outra ponto é saber que o MVC do JSF possui a View com
 		maior grau de importância ao invés do Controller do MVC
 		tradicional, baseada em Facelets e Managed Beans.
+
+		Implementações comuns: Oracle Mojarra e Apache MyFaces
+		Bibliotecas comuns: PrimeFaces, RichFaces ou IceFaces.
 ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
 
 Especificação SAX evoluiu para JAX

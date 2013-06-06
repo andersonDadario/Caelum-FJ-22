@@ -15,6 +15,11 @@ Principais conceitos:
 					     [qualquer classe
 	- @test aceita parâmetros, como "expected"
 	- CAST no Java é mais usado do que eu pensava
+	- JSF é uma especificação de um framework orientado a 			componentes, que tenta unir o mundo Desktop com Web, 			guardando o estado dos objetos e fornecendo componentes 		prontos como Calendários, Tabelas, Formulários, etc. 			Concorrente do GWT, Vaadin, Apache Wicket e Tampestry. 
+
+		Outra ponto é saber que o MVC do JSF possui a View com
+		maior grau de importância ao invés do Controller do MVC
+		tradicional, baseada em Facelets e Managed Beans.
 ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
 
 Especificação SAX evoluiu para JAX

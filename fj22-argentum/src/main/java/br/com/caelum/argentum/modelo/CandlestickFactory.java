@@ -9,19 +9,32 @@ public class CandlestickFactory {
 		Calendar dataDoDia = todosOsNegocios.get(0).getData();
 		List<Negociacao> doDia = new ArrayList<Negociacao>();
 		List<Candlestick> candles = new ArrayList<Candlestick>();
-		Candlestick c = constroiCandleParaData(dataDoDia, doDia);
+		Candlestick c = null;
 		
 		for(Negociacao n : todosOsNegocios){
-			if(!n.isMesmoDia(dataDoDia, doDia)){			
-				candles.add(c);
+			if (n.getData().before(dataDoDia)) {
+			    throw new IllegalStateException("negociações em ordem errada");
+			}
+			// se não for mesmo dia, fecha candle e reinicia variáveis
+						
+			if(c == null){
+				c = constroiCandleParaData(dataDoDia, doDia);
+			}
+			
+			if(!n.isMesmoDia(dataDoDia)){
+			    Candlestick candleDoDia = constroiCandleParaData(dataDoDia, doDia);
+			    candles.add(candleDoDia);
 				dataDoDia = n.getData();
 				doDia.clear();
-			} else {
-				doDia.add(n);
 			}
+			
+			doDia.add(n);
 		}
 		
-		candles.add(c);
+		// adiciona último candle
+		  Candlestick candleDoDia = constroiCandleParaData(dataDoDia, doDia);
+		  candles.add(candleDoDia);
+
 		
 		return candles;
 	}

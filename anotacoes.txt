@@ -21,6 +21,12 @@ Outro ponto é saber que o MVC do JSF possui a View com maior grau de importânc
 
 Implementações comuns: Oracle Mojarra e Apache MyFaces
 Bibliotecas comuns: PrimeFaces, RichFaces ou IceFaces.
+	- Atalho ALT+SHIFT+I refatora variáveis: De ( Candle c = serie.getCandle(i); soma += c.getFechamento();) Para ( soma += serie.getCandle(i).getFechamento(); )
+	- Atalho CTRL+SHIFT+O tira imports desnecessários também
+	- Atalho ALT+SHIFT+M realiza Extract Method
+	- Atalho ALT+SHIFT+L realiza Extract Local Variable
+	- Atalhos ALT+SHIFT = Refatoração
+	- Atalho ALT+SHIFT+T = Mostra Menu de Refatoração
 ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
 
 Especificação SAX evoluiu para JAX

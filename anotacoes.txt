@@ -28,6 +28,8 @@ Bibliotecas comuns: PrimeFaces, RichFaces ou IceFaces.
 	- Atalhos ALT+SHIFT = Refatoração
 	- Atalho ALT+SHIFT+T = Mostra Menu de Refatoração
 	- Refira os objetos pela interface
+	- API de Reflection = manipular classes desconhecidas o/
+	- IFs aumentam a Complexidade Ciclomatica
 ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
 
 Especificação SAX evoluiu para JAX

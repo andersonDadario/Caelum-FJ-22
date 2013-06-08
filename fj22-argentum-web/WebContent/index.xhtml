@@ -10,10 +10,42 @@
   </h:head>
 
   <h:body>
-
+     <!-- Forms -->
+     <p:panel header="Dados do gráfico">
+	  <h:form id="dadosGrafico">
+	   <p:growl/>
+	    <h:panelGrid columns="2">
+	      <p:outputLabel for="titulo" value="Título:"/>
+	      <p:inputText id="titulo" value="#{argentumBean.titulo}" required="true">
+	      	<f:validateLength minimum="3" />
+	      </p:inputText>
+	      
+	      
+	      <p:outputLabel value="Indicador:" for="indicador" required="true" />
+			<p:selectOneMenu id="indicador" value="#{argentumBean.nomeIndicador}">
+			  <f:selectItem itemValue="IndicadorAbertura" itemLabel="Abertura" />
+			  <f:selectItem itemValue="IndicadorFechamento" itemLabel="Fechamento" />
+			</p:selectOneMenu>
+			
+			<p:outputLabel value="Média:" for="media" />
+<p:selectOneMenu id="media" value="#{argentumBean.nomeMedia}">
+  <f:selectItem itemValue="" itemLabel="Escolhe um" />
+  <f:selectItem itemValue="MediaMovelSimples" itemLabel="Simples" />
+  <f:selectItem itemValue="MediaMovelPonderada" itemLabel="Ponderada" />
+</p:selectOneMenu>
+			
+			
+	      <h:commandLink action="#{argentumBean.preparaDados}" value="Gerar gráfico" />
+	    </h:panelGrid>
+	  </h:form>
+	</p:panel>
  
-     <p:panel header="Negociações" footer="Argentum Web">
-     <p:lineChart value="#{argentumBean.modeloGrafico}" title="PETR4" />
+     <p:panel header="Negociações" footer="Argentum Web" rendered="#{argentumBean.modeloGrafico != null}">
+     
+
+     
+    <p:lineChart value="#{argentumBean.modeloGrafico}" legendPosition="e" 
+                    title="#{argentumBean.titulo}" />
   
       <!-- h:outputText value="Olá JSF!" /-->
     

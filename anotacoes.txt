@@ -27,6 +27,7 @@ Bibliotecas comuns: PrimeFaces, RichFaces ou IceFaces.
 	- Atalho ALT+SHIFT+L realiza Extract Local Variable
 	- Atalhos ALT+SHIFT = Refatoração
 	- Atalho ALT+SHIFT+T = Mostra Menu de Refatoração
+	- Refira os objetos pela interface
 ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
 
 Especificação SAX evoluiu para JAX

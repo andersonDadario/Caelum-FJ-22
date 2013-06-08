@@ -5,7 +5,35 @@ import java.util.Calendar;
 import java.util.List;
 
 public class CandlestickFactory {
-
+	public List<Candle> constroiCandles(List<Negociacao> todosOsNegocios){
+		Calendar dataDoDia = todosOsNegocios.get(0).getData();
+		List<Negociacao> doDia = new ArrayList<Negociacao>();
+		List<Candle> candles = new ArrayList<Candle>();
+		Candle c = null;
+		
+		for(Negociacao n : todosOsNegocios){
+			if (n.getData().before(dataDoDia)) {
+			    throw new IllegalStateException("negociações em ordem errada");
+			}
+			// se não for mesmo dia, fecha candle e reinicia variáveis
+						
+			if(c == null){
+				c = constroiCandleParaData(dataDoDia, doDia);
+			}
+			
+			if(!n.isMesmoDia(dataDoDia)){
+			    Candle candleDoDia = constroiCandleParaData(dataDoDia, doDia);
+			    candles.add(candleDoDia);
+				dataDoDia = n.getData();
+				doDia.clear();
+			}
+			
+			doDia.add(n);
+		}
+		
+		return candles;
+	}
+	
 	public Candle constroiCandleParaData(Calendar data, List<Negociacao> negocios) {
 
 		double maximo = Double.MIN_VALUE;

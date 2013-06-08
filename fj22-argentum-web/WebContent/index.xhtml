@@ -10,7 +10,11 @@
   </h:head>
 
   <h:body>
-     <p:panel header="Negociações" footer="Argentum Web">  
+
+ 
+     <p:panel header="Negociações" footer="Argentum Web">
+     <p:lineChart value="#{argentumBean.modeloGrafico}" title="PETR4" />
+  
       <!-- h:outputText value="Olá JSF!" /-->
     
     <h:form id="listaNegociacao">
